@@ -10,9 +10,9 @@
 [submodule "Rosetta/cc/third_party/emp-toolkit/emp-zk"]
 	path = Rosetta/cc/third_party/emp-toolkit/emp-zk
 	url = https://github.com/emp-toolkit/emp-zk.git
-[submodule "Rosetta/cc/third_party/emp-toolkit/emp-ot"]
-	path = Rosetta/cc/third_party/emp-toolkit/emp-ot
-	url = https://github.com/emp-toolkit/emp-ot.git
+# [submodule "Rosetta/cc/third_party/emp-toolkit/emp-ot"]
+# 	path = Rosetta/cc/third_party/emp-toolkit/emp-ot
+# 	url = https://github.com/emp-toolkit/emp-ot.git
 [submodule "Rosetta"]
 	path = Rosetta
 	url = https://github.com/LatticeX-Foundation/Rosetta.git
