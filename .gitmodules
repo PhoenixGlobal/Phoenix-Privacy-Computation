@@ -1,0 +1,18 @@
+[submodule "Rosetta/cc/third_party/emp-toolkit/emp-tool"]
+	path = Rosetta/cc/third_party/emp-toolkit/emp-tool
+	url = https://github.com/emp-toolkit/emp-tool.git
+[submodule "Rosetta/cc/third_party/io"]
+	path = Rosetta/cc/third_party/io
+	url = https://github.com/LatticeX-Foundation/Rosetta-IO.git
+[submodule "Rosetta/cc/third_party/spdlog"]
+	path = Rosetta/cc/third_party/spdlog
+	url = https://github.com/LatticeX-Foundation/Rosetta-Log.git
+[submodule "Rosetta/cc/third_party/emp-toolkit/emp-zk"]
+	path = Rosetta/cc/third_party/emp-toolkit/emp-zk
+	url = https://github.com/emp-toolkit/emp-zk.git
+[submodule "Rosetta/cc/third_party/emp-toolkit/emp-ot"]
+	path = Rosetta/cc/third_party/emp-toolkit/emp-ot
+	url = https://github.com/emp-toolkit/emp-ot.git
+[submodule "Rosetta"]
+	path = Rosetta
+	url = https://github.com/LatticeX-Foundation/Rosetta.git
