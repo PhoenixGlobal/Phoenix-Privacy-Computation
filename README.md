@@ -51,6 +51,12 @@ Phoenix-Privacy-Computation is based on `Rosetta`,which is a privacy-preserving 
 
   Output: `v1.14.0` indicates successful installation.
 
+  ### Web3.py
+    ```bash
+    # install web3.py
+    pip3 install web3
+    ````
+
   ### Rosetta
 
   ```bash
