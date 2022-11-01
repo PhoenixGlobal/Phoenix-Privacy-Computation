@@ -113,7 +113,7 @@ contract PrivacyComputation is Context, Ownable {
         party2=partyC;
     }
 
-    function submit(uint32 roundId,bytes calldata data) external{
+    function mpcSubmit(uint32 roundId,bytes calldata data) external{
         require(roundId == RoundId, "the roundId is not equal to RoundId");
 
         require((msg.sender== party0||msg.sender== party1||msg.sender== party2), "msg.sender address error");
