@@ -65,7 +65,7 @@ contract PrivacyComputationV2 is Context, Ownable {
     function deleteJob(uint256 jobId) external{
         Job storage job=Jobs[jobId];
         require(job.jobId != 0, "Job does not exist");
-        require(job.owner != _msgSender(), "You are not the owner of the job");
+        require(_msgSender()==owner() || _msgSender()==job.owner, "You are not the owner of the job");
         delete Jobs[jobId];
         emit DeleteAJob(_msgSender(),jobId);
     }
