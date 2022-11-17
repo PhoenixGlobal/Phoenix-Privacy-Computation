@@ -30,7 +30,8 @@ contract PrivacyComputationV2 is Context, Ownable {
         require(partyB != address(0), "address partyB is the zero address");
         require(partyC != address(0), "address partyC is the zero address");
         require(bytes(jobName).length > 0,"jobName is empty");
-        uint256 jobId=getJobId(_msgSender(),block.timestamp);
+        uint256 timestamp = block.timestamp/1000;
+        uint256 jobId=getJobId(_msgSender(),timestamp);
         require(Jobs[jobId].jobId==0,"Job already exists");
         Job storage job = Jobs[jobId];
         job.jobId=jobId;
