@@ -21,6 +21,7 @@ contract PrivacyComputationV2 is Context, Ownable {
     event CreateAJob(address sender,uint256 jobId,string jobName,address partyA,address partyB,address partyC);
     event DeleteAJob(address sender,uint256 jobId);
     event MpcSubmit(address sender,uint256 jobId,uint256 roundId,bytes data);
+    event StartAJob(address sender,uint256 jobId,uint256 roundId);
 
     constructor() public  {
     }
@@ -43,6 +44,14 @@ contract PrivacyComputationV2 is Context, Ownable {
         job.owner=_msgSender();
         emit CreateAJob(_msgSender(),jobId,jobName,partyA,partyB,partyC);
         return jobId;
+    }
+
+    function startJob(uint256 jobId) external{
+        Job storage job=Jobs[jobId];
+        require(job.jobId != 0, "Job does not exist");
+        require(_msgSender() == owner()|| _msgSender()==job.owner ||_msgSender()== job.party0||_msgSender()== job.party1||_msgSender()== job.party2, "caller is not the party");
+        uint256 roundId = getRoundId(jobId);
+        emit StartAJob(_msgSender(),jobId,roundId);
     }
 
     function getJobId(address owner,uint256 timestamp) public pure returns(uint256){
@@ -92,7 +101,7 @@ contract PrivacyComputationV2 is Context, Ownable {
     }
 
 
-    function getRoundId(uint256 jobId) external view returns(uint256)
+    function getRoundId(uint256 jobId) public view returns(uint256)
     {
         Job storage job=Jobs[jobId];
         require(job.jobId != 0, "Job does not exist");
@@ -102,7 +111,7 @@ contract PrivacyComputationV2 is Context, Ownable {
     function ReSetRoundId(uint256 jobId) external {
         Job storage job=Jobs[jobId];
         require(job.jobId != 0, "Job does not exist");
-        require(_msgSender() == owner()||_msgSender()== job.party0||_msgSender()== job.party1||_msgSender()== job.party2, "caller is not the party");
+        require(_msgSender() == owner()|| _msgSender()==job.owner ||_msgSender()== job.party0||_msgSender()== job.party1||_msgSender()== job.party2, "caller is not the party");
         job.roundId++;
     }
 }
