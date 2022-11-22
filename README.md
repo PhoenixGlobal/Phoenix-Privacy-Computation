@@ -79,7 +79,7 @@ Create separate directories for three computing nodes `P0`, `P1`, `P2`, e.g. `mi
 mkdir millionaire0 millionaire1 millionaire2
 ```
 
-then copy `chain.py`, `log.py`, `millionaire.py`,`log` to  `millionaire0`, `millionaire1`, `millionaire2`, and set three parties address in `chain.py`,then set three parties address to PhoenixChain by calling `setPartyAddresses` of the privacy computation contract.
+then copy `chainV2.py`, `log.py`, `millionaire.py`,`log` to  `millionaire0`, `millionaire1`, `millionaire2`, and set three parties address in `chainV2.py`,then set three parties address to PhoenixChain by calling `createJob` of the privacy computation contract.
 
 - Generate server key and certificate
 
@@ -154,21 +154,28 @@ Run the `Millionaire Problem` example:
 
 ```bash
 # MPC player 2
-python3 millionaire.py --party_id=2
+python3 chainV2.py --party_id=2
 ```
 
 - **`P1`node**
 
 ```bash
 # MPC player 1
-python3 millionaire.py --party_id=1
+python3 chainV2.py --party_id=1
 ```
 
 - **`P0` node**
 
 ```bash
 # MPC player 0
-python3 millionaire.py --party_id=0
+python3 chainV2.py --party_id=0
+```
+
+- **`Start a job`**
+
+```bash
+# start a job id
+python3 startJob.py
 ```
 
 After execution, output should be like this: 

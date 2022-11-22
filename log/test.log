@@ -1,0 +1,18 @@
+DEBUG [2022-11-22 10:51:00]  web3.RequestManager  Making request. Method: eth_getTransactionCount 
+DEBUG [2022-11-22 10:51:00]  web3.providers.HTTPProvider  Making request HTTP. URI: https://dataseed1.phoenix.global/rpc/, Method: eth_getTransactionCount 
+DEBUG [2022-11-22 10:51:00]  urllib3.connectionpool  Starting new HTTPS connection (1): dataseed1.phoenix.global 
+DEBUG [2022-11-22 10:51:01]  urllib3.connectionpool  https://dataseed1.phoenix.global:443 "POST /rpc/ HTTP/1.1" 200 65 
+DEBUG [2022-11-22 10:51:01]  web3.providers.HTTPProvider  Getting response HTTP. URI: https://dataseed1.phoenix.global/rpc/, Method: eth_getTransactionCount, Response: {'jsonrpc': '2.0', 'id': 0, 'result': '0x50'} 
+DEBUG [2022-11-22 10:51:01]  web3.RequestManager  Making request. Method: eth_gasPrice 
+DEBUG [2022-11-22 10:51:01]  web3.providers.HTTPProvider  Making request HTTP. URI: https://dataseed1.phoenix.global/rpc/, Method: eth_gasPrice 
+DEBUG [2022-11-22 10:51:01]  urllib3.connectionpool  https://dataseed1.phoenix.global:443 "POST /rpc/ HTTP/1.1" 200 71 
+DEBUG [2022-11-22 10:51:01]  web3.providers.HTTPProvider  Getting response HTTP. URI: https://dataseed1.phoenix.global/rpc/, Method: eth_gasPrice, Response: {'jsonrpc': '2.0', 'id': 1, 'result': '0x3b9aca00'} 
+DEBUG [2022-11-22 10:51:01]  web3.RequestManager  Making request. Method: eth_chainId 
+DEBUG [2022-11-22 10:51:01]  web3.providers.HTTPProvider  Making request HTTP. URI: https://dataseed1.phoenix.global/rpc/, Method: eth_chainId 
+DEBUG [2022-11-22 10:51:01]  urllib3.connectionpool  https://dataseed1.phoenix.global:443 "POST /rpc/ HTTP/1.1" 200 66 
+DEBUG [2022-11-22 10:51:01]  web3.providers.HTTPProvider  Getting response HTTP. URI: https://dataseed1.phoenix.global/rpc/, Method: eth_chainId, Response: {'jsonrpc': '2.0', 'id': 2, 'result': '0x38c'} 
+DEBUG [2022-11-22 10:51:01]  web3.RequestManager  Making request. Method: eth_sendRawTransaction 
+DEBUG [2022-11-22 10:51:01]  web3.providers.HTTPProvider  Making request HTTP. URI: https://dataseed1.phoenix.global/rpc/, Method: eth_sendRawTransaction 
+DEBUG [2022-11-22 10:51:01]  urllib3.connectionpool  https://dataseed1.phoenix.global:443 "POST /rpc/ HTTP/1.1" 200 115 
+DEBUG [2022-11-22 10:51:01]  web3.providers.HTTPProvider  Getting response HTTP. URI: https://dataseed1.phoenix.global/rpc/, Method: eth_sendRawTransaction, Response: {'jsonrpc': '2.0', 'id': 3, 'result': '0x2d414e4b3e2a36c4298b9f31757d29ef315392b4c0d2e8fa50841422beb3c074'} 
+INFO [2022-11-22 10:51:01]  root  StartJob 107492133485484150916312015641343090971479321462850067243337598692316391727068 transaction successful with hash: 0x2d414e4b3e2a36c4298b9f31757d29ef315392b4c0d2e8fa50841422beb3c074 
