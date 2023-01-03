@@ -94,7 +94,3 @@ class PrivacyContract():
         print("End startJobId,jobId is ", jobId)
         log(f'End startJobId, jobId is {jobId}')
 
-# pContract=PrivacyContract()
-# pContract.eventMonitor()
-# pContract.runJobsLoop()
-
