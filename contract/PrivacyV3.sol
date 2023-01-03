@@ -37,7 +37,7 @@ contract PrivacyComputationV3 is Context, Ownable {
     event CreateAJob(address sender,uint256 jobId,string jobName,address partyA,address partyB,address partyC);
     event UpdateAJob(address sender,uint256 jobId,string jobName,address partyA,address partyB,address partyC);
     event DeleteAJob(address sender,uint256 jobId);
-    event MpcSubmit(address sender,uint256 jobId,uint256 roundId,bytes data);
+    event MpcSubmit(address sender,uint256 jobId,uint256 roundId,bytes data,uint256 ccdCost);
     event StartAJob(address sender,uint256 jobId,uint256 roundId);
 
     constructor(address ccd,address ccdCollectorAddress) public  {
@@ -158,7 +158,7 @@ contract PrivacyComputationV3 is Context, Ownable {
             job.roundId++;
         }
 
-        emit MpcSubmit(_msgSender(),jobId,roundId,data);
+        emit MpcSubmit(_msgSender(),jobId,roundId,data,ccdCost);
     }
 
     function getRoundId(uint256 jobId) public view returns(uint256)

@@ -1,4 +1,5 @@
 .idea
+log/test.log
 log
 __pycache__
 example/millionaire0/log
@@ -8,3 +9,5 @@ example/millionaire1/__pycache__
 example/millionaire2/log
 example/millionaire2/__pycache__
 contract/node_modules
+*/log/
+*/__pycache__
