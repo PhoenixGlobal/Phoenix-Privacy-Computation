@@ -13,8 +13,8 @@ from addressApi import getAddressPri,getDatas
 from chainV3Api import *
 
 theJobId=int(sys.argv[2])
-print('P2通过参数传入的theJobId为:',theJobId)
-log(f"P2通过参数传入的theJobId为: {theJobId}")
+print('The JobId gotten from sys.argv is ',theJobId)
+log(f"The JobId gotten from sys.argv is  {theJobId}")
 
 # activate protocol, here use SecureNN.
 rtt.activate("SecureNN")
